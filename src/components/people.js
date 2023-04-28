@@ -23,12 +23,12 @@ text-shadow: 0px 2px 2px
 
 `;
 
-function Home() {
+function People() {
     return (
         <HomeDiv>
-           <h1 className='BodyText1'>HomePage</h1>
+           <h1 className='BodyText1'>PeoplePage</h1>
         </HomeDiv>
     );
 };
 
-export default Home;
+export default People;

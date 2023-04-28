@@ -15,6 +15,7 @@ const Margin = styled.div`
   height: 1080px;
   overflow: hidden;
   justify-content: center;
+  
 `;
 
 const FlexDiv = styled.div`

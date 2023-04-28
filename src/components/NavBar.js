@@ -1,13 +1,18 @@
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
 import styled from "styled-components";
 import MyImg from "../assets/me.png"
+import { FaFacebook } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import { IoMdPeople } from "react-icons/io";
+import { IoLogoGameControllerA } from "react-icons/io";
+import { Link } from 'react-router-dom';
+
 
 const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 100px;
   padding: 0 20px;
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -65,6 +70,21 @@ const NavbarLeft = styled.div`
   }
 `;
 
+const NavbarCenter = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+
+  .navbar_center_icon {
+    color: #ccc;
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 32px;
+    width: 32px;
+  }
+
+`;
+
 const NavbarRight = styled.div`
   display: flex;
   align-items: center;
@@ -107,7 +127,10 @@ const NavbarRight = styled.div`
   }
 `;
 
+
+
 function Navbar() {
+
   return (
     <NavbarWrapper>
       <NavbarLeft>
@@ -117,6 +140,17 @@ function Navbar() {
           <button type="submit">검색</button>
         </form>
       </NavbarLeft>
+      <NavbarCenter>
+         <Link to="/Home">
+          <AiFillHome className="navbar_center_icon" />
+        </Link>
+        <Link to="/Game">
+          <IoLogoGameControllerA className="navbar_center_icon" />
+        </Link>
+        <Link to="/People">
+          <IoMdPeople className="navbar_center_icon" />
+        </Link>
+      </NavbarCenter>
       <NavbarRight>
         <div className="navbar__user">
           <img
